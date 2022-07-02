@@ -28,7 +28,11 @@ public class Bishop implements Piece {
 		
 		if (driver.posChecker(newPos)) {
 			
+			
+			
 		}
+		
+		return false;
 	}
 
 }
