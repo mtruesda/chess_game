@@ -31,4 +31,28 @@ class TestsFile {
 		assertFalse(rook.move("B04"));
 	}
 	
+	@Test
+	void testBishopMoves() {
+		
+	}
+	
+	@Test
+	void testKnightMoves() {
+		
+	}
+	
+	@Test
+	void testKingMoves() {
+		
+	}
+	
+	@Test
+	void testQueenMoves() {
+		
+	}
+	
+	@Test
+	void testBoard() {
+		
+	}
 }

@@ -14,14 +14,21 @@ public class Bishop implements Piece {
 	
 	@Override
 	public boolean move(String newPos) {
-		// TODO Auto-generated method stub
+		if (this.isValid(newPos)) {
+			this.pos = newPos;
+			return true;
+		}
+		
 		return false;
 	}
 
 	@Override
 	public boolean isValid(String newPos) {
-		// TODO Auto-generated method stub
-		return false;
+		String[] chars = new String[]{ "A","B","C","D","E","F","G","H" };
+		
+		if (driver.posChecker(newPos)) {
+			
+		}
 	}
 
 }
