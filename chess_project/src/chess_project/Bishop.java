@@ -28,6 +28,12 @@ public class Bishop implements Piece {
 		
 		if (driver.posChecker(newPos)) {
 			
+			String first = Character.toString(newPos.charAt(0));
+			int num = Integer.parseInt(newPos.substring(1));
+			
+			if (chars[num - 1].equals(first)) {
+				return true;
+			}
 			
 			
 		}
