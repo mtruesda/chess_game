@@ -14,13 +14,17 @@ public class Knight implements Piece {
 	
 	@Override
 	public boolean move(String newPos) {
-		// TODO Auto-generated method stub
+		if (this.isValid(newPos)) {
+			this.pos = newPos;
+			return true;
+		}
+		
 		return false;
 	}
 
 	@Override
 	public boolean isValid(String newPos) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 
