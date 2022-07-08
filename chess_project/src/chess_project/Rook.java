@@ -4,12 +4,14 @@ package chess_project;
 public class Rook implements Piece {
 	
 	String pos;
+	String color;
 	
-	public Rook(String pos) {
-		if (!driver.posChecker(pos)) {
+	public Rook(String pos, String color) {
+		if (!driver.posChecker(pos) || !(color.equals("white") || color.equals("black"))) {
 			throw new IllegalArgumentException();
 		}
 		
+		this.color = color;
 		this.pos = pos;
 	}
 
@@ -39,6 +41,15 @@ public class Rook implements Piece {
 		
 		
 		return false;
+	}
+	
+	@Override
+	public String toString() {
+		if (this.color.equals("black")) {
+			return "RB";
+		} else {
+			return "RW";
+		}
 	}
 	
 }

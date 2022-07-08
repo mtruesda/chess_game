@@ -23,7 +23,7 @@ class TestsFile {
 	@Test
 	void testRookMoves() {
 		//System.out.println("Testing creation");
-		Rook rook = new Rook("A01");
+		Rook rook = new Rook("A01", "black");
 		//System.out.println("Testing Move");
 		assertTrue(rook.move("A08"));
 		// new current pos is A08
@@ -34,9 +34,11 @@ class TestsFile {
 	@Test
 	void testBishopMoves() {
 		System.out.println("Testing white");
-		Bishop bishopw = new Bishop("A01", "white");
+		Bishop bishopw = new Bishop("A01", "white", "black");
+		System.out.println("Testing move white proper");
 		System.out.println("Testing black");
-		Bishop bishopb = new Bishop("A02", "black");
+		Bishop bishopb = new Bishop("A02", "black", "black");
+		System.out.println("Testing move black improper");
 		
 	}
 	
@@ -57,6 +59,7 @@ class TestsFile {
 	
 	@Test
 	void testBoard() {
-		
+		Board board = new Board();
+		System.out.println(board.toString());
 	}
 }

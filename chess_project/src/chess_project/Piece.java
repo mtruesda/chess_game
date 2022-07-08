@@ -6,4 +6,6 @@ public interface Piece {
 	
 	public boolean isValid(String newPos);
 	
+	public String toString();
+	
 }
