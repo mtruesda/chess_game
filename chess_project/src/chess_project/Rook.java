@@ -51,5 +51,10 @@ public class Rook implements Piece {
 			return "RW";
 		}
 	}
+
+	@Override
+	public String getPos() {
+		return this.pos;
+	}
 	
 }

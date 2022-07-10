@@ -1,14 +1,16 @@
 package chess_project;
 
-public class King implements Piece {
+public class Pawn implements Piece {
 
 	String pos;
 	String color;
+	boolean started;
 	
-	public King(String pos, String color) {
+	public Pawn(String pos, String color) {
 		if (driver.posChecker(pos) && (color.equals("white") || color.equals("black"))) {
 			this.pos = pos;
 			this.color = color;
+			this.started = false;
 		} else {
 			throw new IllegalArgumentException();
 		}
@@ -16,35 +18,29 @@ public class King implements Piece {
 	
 	@Override
 	public boolean move(String newPos) {
-		if (this.isValid(newPos)) {
-			this.pos = newPos;
-			return true;
-		} 
-		
+		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean isValid(String newPos) {
-		if (driver.posChecker(newPos)) {
-			
-		}
-		
+		// TODO Auto-generated method stub
 		return false;
-	}
-	
-	@Override
-	public String toString() {
-		if (this.color.equals("black")) {
-			return "KB";
-		} else {
-			return "KW";
-		}
 	}
 
 	@Override
 	public String getPos() {
+		// TODO Auto-generated method stub
 		return this.pos;
 	}
 
+	@Override
+	public String toString() {
+		if (this.color.equals("black")) {
+			return "PB";
+		} else {
+			return "PW";
+		}
+	}
+	
 }

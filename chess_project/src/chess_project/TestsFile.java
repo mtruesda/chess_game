@@ -33,13 +33,22 @@ class TestsFile {
 	
 	@Test
 	void testBishopMoves() {
-		System.out.println("Testing white");
+		//System.out.println("Testing white");
 		Bishop bishopw = new Bishop("A01", "white", "black");
-		System.out.println("Testing move white proper");
-		System.out.println("Testing black");
+		//System.out.println("Testing move white proper");
+		//System.out.println("Testing black");
 		Bishop bishopb = new Bishop("A02", "black", "black");
-		System.out.println("Testing move black improper");
+		//System.out.println("Testing move black improper");
 		
+	}
+	
+	@Test
+	void testBishopWBoard() {
+		Board board = new Board();
+		System.out.println(board);
+		//System.out.println(board.blacks.get(2).move("B02"));
+		board.updateBoard();
+		System.out.println(board);
 	}
 	
 	@Test
@@ -60,6 +69,6 @@ class TestsFile {
 	@Test
 	void testBoard() {
 		Board board = new Board();
-		System.out.println(board.toString());
+		//System.out.println(board.toString());
 	}
 }

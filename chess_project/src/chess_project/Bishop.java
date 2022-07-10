@@ -51,7 +51,7 @@ public class Bishop implements Piece {
 				// System.out.println("Black with first letter odd number good");
 				return true;
 			} else if ( (first.equals("B") || first.equals("D") || first.equals("F") || first.equals("H"))
-					&& num % 2 == 1 && this.color.equals("white")) {
+					&& num % 2 == 1 && this.color.equals("black")) {
 				// System.out.println("Black with second letter odd number good");
 				return true;
 			} else {
@@ -74,6 +74,8 @@ public class Bishop implements Piece {
 			// need to find a way to identify if the diagonal movement is valid.
 			String[] values = new String[] {"A","B","C","D","E","F","G","H"};
 			int[] distances = returnDistance(first);
+			
+			System.out.println(distances);
 			
 			
 		}
@@ -122,6 +124,11 @@ public class Bishop implements Piece {
 		} else {
 			return "BW";
 		}
+	}
+
+	@Override
+	public String getPos() {
+		return this.pos;
 	}
 
 }
