@@ -24,7 +24,7 @@ public class Bishop implements Piece {
 	
 	@Override
 	public boolean move(String newPos) {
-		if (this.isValid(newPos)) {
+		if (this.isValid(newPos) && this.colorGood(newPos)) {
 			this.pos = newPos;
 			return true;
 		}
@@ -69,14 +69,19 @@ public class Bishop implements Piece {
 		if (driver.posChecker(newPos)) {
 			// obtain values from the new position
 			String first = Character.toString(newPos.charAt(0));
+			String orig = Character.toString(pos.charAt(0));
 			int num = Integer.parseInt(newPos.substring(1));
 			
 			// need to find a way to identify if the diagonal movement is valid.
 			String[] values = new String[] {"A","B","C","D","E","F","G","H"};
-			int[] distances = returnDistance(first);
+			int[] distances = returnDistance(orig);
 			
-			System.out.println(distances);
+			for (int i = 0; i < distances.length; i++) {
+				System.out.print(distances[i]);
+				System.out.print(" ");
+			}
 			
+			System.out.println();
 			
 		}
 		
@@ -94,6 +99,8 @@ public class Bishop implements Piece {
 				firstIndex = i;
 			}
 		}
+		
+		System.out.println(firstIndex);
 		
 		returner[firstIndex] = 0;
 		

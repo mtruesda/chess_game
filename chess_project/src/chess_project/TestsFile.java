@@ -45,8 +45,9 @@ class TestsFile {
 	@Test
 	void testBishopWBoard() {
 		Board board = new Board();
-		System.out.println(board);
-		//System.out.println(board.blacks.get(2).move("B02"));
+		//System.out.println(board);
+		System.out.println("C01 -> B02");
+		System.out.println(board.blacks.get(2).move("B02"));
 		board.updateBoard();
 		System.out.println(board);
 	}
